@@ -4,7 +4,7 @@ use std::io::{self, BufRead, BufReader, Write};
 use std::net::TcpStream;
 use std::str;
 
-fn client_main() {
+pub fn client_main() {
     let mut stream = TcpStream::connect("127.0.0.1:8888").expect("Could not connect to server");
     loop {
         let mut input = String::new();

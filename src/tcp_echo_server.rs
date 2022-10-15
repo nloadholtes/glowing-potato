@@ -20,7 +20,7 @@ fn handle_client(mut stream: TcpStream) -> Result<(), Error> {
     }
 }
 
-fn echo_server_main() {
+pub fn echo_server_main() {
     let listener = TcpListener::bind("0.0.0.0:8888").expect("Could not bind");
     for stream in listener.incoming() {
         match stream {
